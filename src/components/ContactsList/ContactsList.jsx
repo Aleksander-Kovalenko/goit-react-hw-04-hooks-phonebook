@@ -8,7 +8,7 @@ export const ContactsList = ({ contacts, title, onDeleteContact }) => {
       <TitleSection title={title} />
       <ul>
         {contacts.length === 0
-          ? "Такого контакта нету"
+          ? "List is empty"
           : contacts.map((item) => (
               <ContactItem
                 key={item.id}

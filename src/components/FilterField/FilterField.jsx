@@ -2,12 +2,12 @@ import { Component } from "react";
 
 export class FilterField extends Component {
   onHandleChange = (e) => {
-    this.props.onChange(e.target.value);
+    this.props.onChangeFilter(e.target.value);
   };
 
   render() {
     return (
-      <label htmlFor="">
+      <label>
         <span className="label-form">Search contact</span>
         <input
           type="text"
