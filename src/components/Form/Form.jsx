@@ -1,6 +1,6 @@
 import { nanoid } from "nanoid";
 import propTypes from "prop-types";
-import React, { Component, useState } from "react";
+import { useState } from "react";
 
 export function Form({ onSubmit }) {
   const [name, setName] = useState("");
@@ -17,9 +17,12 @@ export function Form({ onSubmit }) {
     };
 
     onSubmit(newContact);
-    document.forms.reset();
+    reset();
   };
-
+  const reset = () => {
+    setName("");
+    setNumber("");
+  };
   const handleInputChange = (e) => {
     const { name, value } = e.target;
 
