@@ -18,7 +18,6 @@ export default function App() {
     if (checkedName) {
       return alert("Sorry, but this Name is in this Phone book");
     }
-    console.log(Contacts);
     Contacts.push(contact);
     setContacts(Contacts);
   };
